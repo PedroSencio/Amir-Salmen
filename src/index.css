@@ -1,0 +1,26 @@
+
+body, html, root {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: auto;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  #root::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,116 @@
+#box-view2 {
+    display: flex;
+    background-color: rgb(16, 16, 16);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+button{
+    cursor: pointer !important;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+#left-text, #right-foto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#left-text h1 {
+    color: white;
+}
+
+#line-1{
+    background-color: orange;
+    height: 1px;
+    width: 300px;
+    margin-bottom: 90px;
+}
+
+#left-text h2 {
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 9px;
+    font-weight: 350;
+}
+
+#right-foto {
+    margin-top: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end !important;
+}
+
+#right-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+#buttons-view2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#leia {
+    background-color: orange !important;
+    color: white !important;
+}
+
+#box-view2 button {
+    border: 0;
+    margin-top: 70px;
+    height: 50px;
+    width: 220px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: green;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    transition: 0.2s ease-in-out;
+
+}
+
+#box-view2 button img {
+    width: auto;
+    height: 70%;
+    filter: invert(1);
+    object-fit: cover;
+}
+
+#box-view2 button:hover {
+    transform: scale(1.08);
+    transition: 0.2s ease-in-out;
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}

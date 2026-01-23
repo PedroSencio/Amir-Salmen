@@ -1,0 +1,101 @@
+#minha-historia-mobile {
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 35%, #f4f5f8 35%, #f5f6fb 100%);
+    min-height: 100vh;
+    color: #111;
+}
+
+.mh-container {
+    padding: 40px 22px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.mh-hero {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mh-hero p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #ff9214;
+    font-weight: 600;
+}
+
+.mh-hero h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.mh-image-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    margin-top: -80px;
+}
+
+.mh-image-card img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.mh-image-card p {
+    color: #444;
+    line-height: 1.5;
+}
+
+.mh-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mh-timeline article {
+    background: #fff;
+    border-radius: 18px;
+    padding: 16px 18px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mh-timeline h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    color: #111;
+}
+
+.mh-timeline p {
+    margin: 0;
+    color: #505050;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mh-cta {
+    background: #111;
+    color: #fff;
+    border-radius: 24px;
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mh-cta a {
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #ff8f00, #ff5b00);
+    color: #fff;
+    font-weight: 600;
+}

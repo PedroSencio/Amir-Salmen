@@ -1,0 +1,13 @@
+html, body, root {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: black;
+}
+
+#root{
+  background-color: black;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif !important;
+}

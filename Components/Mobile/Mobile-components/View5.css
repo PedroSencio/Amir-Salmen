@@ -1,0 +1,64 @@
+#mobile-view5 {
+    background: #111;
+    color: #fff;
+    padding: 60px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#mobile-view5 h2 {
+    font-size: 28px;
+    margin: 0;
+}
+
+#mobile-view5 p {
+    color: #cccccc;
+}
+
+#mobile-view5 form {
+    background: #1c1c1c;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+#mobile-view5 label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: #f2f2f2;
+}
+
+#mobile-view5 input,
+#mobile-view5 textarea {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+}
+
+#mobile-view5 textarea {
+    resize: vertical;
+}
+
+#mobile-view5 button {
+    margin-top: 10px;
+    border: 0;
+    border-radius: 999px;
+    padding: 12px;
+    background: linear-gradient(45deg, #ff8f00, #ff5e00);
+    color: #fff;
+    font-weight: 600;
+}
+
+#mobile-view5 .status {
+    font-size: 13px;
+    color: #ffae42;
+}

@@ -1,0 +1,11 @@
+#all {
+    overflow-y: auto;
+    background-color: black;
+}
+
+#head{
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    z-index: 10;
+}

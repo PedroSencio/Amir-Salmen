@@ -1,0 +1,119 @@
+#view5 {
+    background-color: rgb(16, 16, 16);
+    padding: 100px 10vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+#view5 .form-copy {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#view5 .form-copy p {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ff8f00;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#view5 .form-copy h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+#view5 .form-copy span {
+    color: #d5d5d5;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#contact-form {
+    background: #fff;
+    border-radius: 28px;
+    padding: 32px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #2a2a2a;
+}
+
+.input-group input,
+.input-group textarea {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 12px 16px;
+    font-size: 15px;
+    background: #fdfdfd;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #ff8f00;
+    box-shadow: 0 0 0 2px rgba(255, 143, 0, 0.15);
+}
+
+#contact-form button {
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(45deg, #ff8f00, #ff5e00);
+    color: #fff;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#contact-form button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(255, 94, 0, 0.35);
+}
+
+.form-status {
+    font-size: 14px;
+    margin: 0;
+    color: #ff8f00;
+}
+
+@media (max-width: 768px) {
+    #view5 {
+        padding: 80px 24px;
+        grid-template-columns: 1fr;
+    }
+
+    #view5 .form-copy {
+        text-align: center;
+    }
+}

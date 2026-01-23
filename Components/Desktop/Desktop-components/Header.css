@@ -1,0 +1,81 @@
+body {
+    margin: 0 !important;
+}
+
+#header-box {
+    background-color: rgb(0, 0, 0);
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo-header {
+    color: white;
+    margin-left: 80px;
+    height: 70px;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#logo-header h2{
+    width: 400px;
+    font-size: 19px;
+}
+
+#logo-header img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+#botoes-header {
+    display: flex;
+    flex-direction: row;
+    margin-right: 80px;
+    gap: 40px;
+}
+
+#botoes-header button{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer !important;
+    position: relative;
+    padding: 4px 0;
+}
+
+#botoes-header button:hover{
+    opacity: 0.9;
+}
+
+#botoes-header button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+#botoes-header button:hover::before{
+    transform: scaleX(1);
+}
+
+.line{
+    height: 30px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.237);
+}
