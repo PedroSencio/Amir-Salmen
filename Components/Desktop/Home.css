@@ -1,6 +1,11 @@
 #all {
     overflow-y: auto;
+    overflow-x: hidden;
     background-color: black;
+}
+
+html, root, body {
+    overflow-x: hidden !important;
 }
 
 #head{

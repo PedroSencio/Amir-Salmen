@@ -1,19 +1,48 @@
 import { Routes, Route } from "react-router-dom";
-import IsMobile from "./IsMobile";
-import IsMobileMinhaHistoria from "./IsMobileMinhaHistoria.jsx";
-import IsMobileNoticias from "./IsMobileNoticias.jsx";
-import IsMobileNossoTrabalho from "./IsMobileNossoTrabalho.jsx";
-import IsMobileBlog from "./IsMobileBlog.jsx"
+import { useEffect, useState } from "react";
+import Home from "../Components/Desktop/Home";
+import HomeMobile from "../Components/Mobile/Home";
+import NoticiasDesktop from "../Components/Desktop/Noticias";
+import NoticiasMobile from "../Components/Mobile/Noticias";
+import MinhaHistoriaDesktop from "../Components/Desktop/MinhaHistoria";
+import MinhaHistoriaMobile from "../Components/Mobile/MinhaHistoria";
+import NossoTrabalhoDesktop from "../Components/Desktop/NossoTrabalho";
+import NossoTrabalhoMobile from "../Components/Mobile/NossoTrabalho";
+import BlogMobile from "../Components/Mobile/Blog";
+import BlogDesktop from "../Components/Desktop/Blog";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function checkScreen() {
+      setIsMobile(window.innerWidth <= 768); // Define o limite do mobile
+    }
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
-    <Routes>
-      <Route path="/" element={<IsMobile />} />
-      <Route path="/minha-historia" element={<IsMobileMinhaHistoria />} />
-      <Route path="/nosso-trabalho" element={<IsMobileNossoTrabalho />} />
-      <Route path="/noticias" element={<IsMobileNoticias />} />
-      <Route path="/blog" element={<IsMobileBlog/>} />
-    </Routes>
+    isMobile ? (
+      <Routes>
+        <Route path="/" element={<HomeMobile />} />
+        <Route path="/minha-historia" element={<MinhaHistoriaMobile />} />
+        <Route path="/nosso-trabalho" element={<NossoTrabalhoMobile />} />
+        <Route path="/noticias" element={<NoticiasMobile />} />
+        <Route path="/blog" element={<BlogMobile />} />
+      </Routes>
+    ) : (
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/minha-historia" element={<MinhaHistoriaDesktop />} />
+        <Route path="/nosso-trabalho" element={<NossoTrabalhoDesktop />} />
+        <Route path="/noticias" element={<NoticiasDesktop />} />
+        <Route path="/blog" element={<BlogDesktop />} />
+      </Routes>
+    )
   );
 }
 

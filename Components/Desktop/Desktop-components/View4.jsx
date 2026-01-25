@@ -1,48 +1,43 @@
 import "./View4.css"
+import { useEffect, useState } from "react"
 
 export default function View4() {
+const [posts, setPosts] = useState([]);
 
-    const noticia1 = {
-        titulo : "Delegado Amir Salmen e policiais da PCPR recebem menção honrosa em Bandeirantes-PR",
-        categoria : "Mérito",
-        imagem : "/noticia1.png",
-        data : "18/06/2025"
-    }
+useEffect(() => {
+    async function getNoticia() {
+        const data = await fetch("http://192.168.15.47:5001/posts");
+        const resp = await data.json();
 
-    const noticia2 = {
-        titulo : "Delegado Amir Salmen realiza palestra sobre ECA no Colégio Cívico Militar Anesio de Almeida Leite",
-        categoria : "Ação Institucional",
-        imagem : "/noticia2.png",
-        data : "12/02/2025"
+        if (resp) {
+            console.log("fetch:", resp);
+            setPosts(resp);
+        }
+        
     }
+    getNoticia()
+},[])
 
     return(
-        <div id="box-view4-noticias">
-            <h1>Últimas notícias</h1>
-            <div id="line-1"></div>
-            <div id="box-noticias">
-                <div className="tema">
-                    <div className="box-noticias">
-                        <img src={noticia1.imagem} alt="" />
-                        <div className="categoria-box">
-                            {noticia1.categoria}
+        <div id="all-view4">
+            <div className="view4-header">
+                <h2>Ultimas noticias</h2>
+                <div id="line-2"></div>
+            </div>
+
+            <div id="posts">
+                {posts.map((post) => (
+                    <article className="post" key={post.id}>
+                        <div className="post__image-wrapper">
+                            <img src={`https://zayrdvyobajbklsuxupy.supabase.co/storage/v1/object/public/Amir/${post.img}`} alt={post.titulo} loading="lazy" />
                         </div>
-                    </div>
-                    <div className="data-box">{noticia1.data}</div>
-                    <h2>{noticia1.titulo}</h2>
-                </div>
-                <div className="tema">
-                    <div className="box-noticias">
-                        <img src={noticia2.imagem} alt="" />
-                        <div className="categoria-box">
-                            {noticia2.categoria}
+                        <div className="post__content">
+                            <h3>{post.titulo}</h3>
+                            <p>{post.desc}</p>
+                            <button type="button" className="post__cta">Ler mais</button>
                         </div>
-                    </div>
-                    <div className="data-box">{noticia2.data}</div>
-                    <h2>{noticia2.titulo}</h2>
-                </div>
-                <div className="box-noticias">
-                </div>
+                    </article>
+                ))}
             </div>
         </div>
     )
