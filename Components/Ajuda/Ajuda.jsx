@@ -26,7 +26,8 @@ export default function Ajuda() {
 
   return (
     <div id="como-denunciar-page">
-    {isMobile ? (<Header />) : (<HeaderMobile />)}
+    {/* Usa o header correto de acordo com a largura da tela */}
+    {isMobile ? <HeaderMobile /> : <Header />}
 
       {/* HERO */}
       <section className="denuncia-hero">
