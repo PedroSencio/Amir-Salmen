@@ -1,0 +1,91 @@
+#como-denunciar-page {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO */
+.denuncia-hero {
+  padding: 32px 16px;
+  width: 80%;
+}
+
+.denuncia-hero p {
+  font-size: 16px;
+  color: orange;
+  font-weight: 600;
+  margin: 0;
+}
+
+.denuncia-hero h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #151515;
+}
+
+.denuncia-hero span {
+  font-size: 16px;
+  color: #444;
+}
+
+/* SEÇÕES */
+.denuncia-section {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.denuncia-section {
+  background-color: #f2f2f2;
+}
+
+.denuncia-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #151515;
+}
+
+.denuncia-section p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px;
+}
+
+/* BOTÕES */
+.denuncia-section button,
+.denuncia-footer button {
+  align-self: flex-start;
+  margin-top: 12px;
+  height: 36px;
+  padding: 0 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #edaa00;
+  color: #151515;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.denuncia-footer {
+  padding: 80px;
+  text-align: center;
+  background-color: #151515;
+  width: 100%;
+  
+}
+
+.denuncia-footer h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.denuncia-footer p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 16px;
+}

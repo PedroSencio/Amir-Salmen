@@ -1,0 +1,89 @@
+#trajetoria-mobile {
+  padding-bottom: 40px;
+}
+
+/* HERO */
+.trajetoria-hero-mobile {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trajetoria-hero-mobile p {
+  font-size: 14px;
+  color: orange;
+  font-weight: 600;
+  margin: 0;
+}
+
+.trajetoria-hero-mobile h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #e2e2e2;
+}
+
+.trajetoria-hero-mobile span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* LISTA */
+.trajetoria-list-mobile {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* CARD */
+.trajetoria-card-mobile {
+  background-color: #e9e9e9;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trajetoria-card-mobile span {
+  font-size: 12px;
+  font-weight: 600;
+  color: orange;
+  text-transform: uppercase;
+}
+
+.trajetoria-card-mobile h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #151515;
+}
+
+.trajetoria-card-mobile p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.trajetoria-card-mobile ul {
+  padding-left: 16px;
+}
+
+.trajetoria-card-mobile li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* DESTAQUE */
+.trajetoria-card-mobile.destaque {
+  background: linear-gradient(135deg, #ff8a00, #ffb347);
+}
+
+.trajetoria-card-mobile.destaque h2,
+.trajetoria-card-mobile.destaque p,
+.trajetoria-card-mobile.destaque span {
+  color: #151515;
+}

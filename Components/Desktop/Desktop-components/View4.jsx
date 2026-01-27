@@ -6,7 +6,7 @@ const [posts, setPosts] = useState([]);
 
 useEffect(() => {
     async function getNoticia() {
-        const data = await fetch("http://192.168.15.47:5001/posts");
+        const data = await fetch("http://192.168.15.47:5001/last_posts");
         const resp = await data.json();
 
         if (resp) {

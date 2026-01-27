@@ -57,6 +57,7 @@ export default function View5() {
                 <span>
                     Compartilhe seu caso, dúvida ou denúncia. Respondemos pessoalmente cada mensagem recebida.
                 </span>
+                <span>Precisa de ajuda? <a href="/ajuda">clique aqui</a></span>
             </div>
             <form id="contact-form" onSubmit={handleSubmit}>
                 <div className="input-group">
@@ -109,7 +110,6 @@ export default function View5() {
                     Enviar
                 </button>
                 {status && <p className="form-status">{status}</p>}
-            
             </form>
         </section>
     );

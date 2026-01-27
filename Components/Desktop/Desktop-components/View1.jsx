@@ -54,7 +54,7 @@ export default function View1() {
             </div>
             </div>
             <button id="denuncie" onClick={scrollToDenuncia}>
-                Denuncie já
+                Como Denunciar?
             </button>
         </div>
     )

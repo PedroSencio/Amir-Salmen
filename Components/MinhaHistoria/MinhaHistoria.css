@@ -1,0 +1,92 @@
+#trajetoria-desktop {
+  padding: 60px 80px;
+  background: radial-gradient(circle at 14% 18%, rgba(255, 166, 92, 0.18), transparent 24%), radial-gradient(circle at 82% 10%, rgba(255, 203, 147, 0.16), transparent 26%), linear-gradient(180deg, #0b0b0b 0%, #101010 60%, #0c0c0c 100%);
+}
+
+/* HERO */
+.trajetoria-hero {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.trajetoria-hero p {
+  color: orange;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.trajetoria-hero h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #dddddd;
+}
+
+.trajetoria-hero span {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* GRID */
+.trajetoria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.trajetoria-card {
+  background-color: #f0f0f0;
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease;
+}
+
+.trajetoria-card:hover {
+  transform: translateY(-4px);
+}
+
+.trajetoria-card h2 {
+  font-size: 20px;
+  color: #151515;
+}
+
+.trajetoria-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.trajetoria-card ul {
+  padding-left: 18px;
+}
+
+.trajetoria-card li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+/* TAG */
+.trajetoria-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: orange;
+  text-transform: uppercase;
+}
+
+/* DESTAQUE */
+.trajetoria-card.destaque {
+  background: linear-gradient(135deg, #ff8a00, #ffb347);
+  color: #151515;
+}
+
+.trajetoria-card.destaque h2,
+.trajetoria-card.destaque p,
+.trajetoria-card.destaque span {
+  color: #151515;
+}

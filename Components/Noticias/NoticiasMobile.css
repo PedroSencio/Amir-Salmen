@@ -1,0 +1,200 @@
+/* =========================
+   CONTAINER
+========================= */
+#noticias-mobile {
+  background-color: #000;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.news-header-mobile {
+  padding: 24px 16px 16px;
+}
+
+.news-header-mobile p {
+  font-size: 14px;
+  color: orange;
+  font-weight: 600;
+  margin: 0;
+}
+
+.news-header-mobile h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.news-header-mobile span {
+  font-size: 13px;
+  color: #cccccc;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.news-top-bar-mobile {
+  padding: 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-pill-mobile {
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: #151515;
+  border: 1px solid #f56e006d;
+  color: orange;
+}
+
+.news-cta-mobile {
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: orange;
+  font-weight: 600;
+}
+
+/* =========================
+   LISTA / CARROSSEL
+========================= */
+.news-list-mobile {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.news-list-mobile::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   CARD
+========================= */
+.news-card-mobile {
+  min-width: 85%;
+  background-color: #e9e9e9;
+  color: #151515;
+  border-radius: 16px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  scroll-snap-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   IMAGEM
+========================= */
+.news-image-mobile {
+  position: relative;
+  height: 160px;
+  background-color: #ccc;
+}
+
+.news-image-mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-image-placeholder-mobile {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* TAG */
+.news-tag-mobile {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.tag-acao {
+  background: rgba(255, 153, 0, 0.2);
+  color: #ff9800;
+}
+
+.tag-agenda {
+  background: rgba(0, 123, 255, 0.2);
+  color: #007bff;
+}
+
+.tag-podcast {
+  background: rgba(155, 89, 182, 0.2);
+  color: #9b59b6;
+}
+
+/* DATA */
+.news-date-chip-mobile {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 11px;
+  background-color: #151515;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+.news-content-mobile {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.news-content-mobile h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.news-content-mobile p {
+  font-size: 13.5px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+.news-read-mobile {
+  margin: 0 14px 14px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background-color: orange;
+  color: #000;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   EMPTY
+========================= */
+.news-empty-mobile {
+  min-width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #cccccc;
+}

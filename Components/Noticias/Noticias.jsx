@@ -1,6 +1,6 @@
 import "./Noticias.css";
 import { use, useEffect, useState } from "react";
-import Header from "./Desktop-components/Header";
+import Header from "../Desktop/Desktop-components/Header";
 
 export default function NoticiasDesktop() {
     const handleOpen = url => {

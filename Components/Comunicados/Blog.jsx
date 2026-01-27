@@ -1,4 +1,4 @@
-import Header from "./Desktop-components/Header";
+import Header from "../Desktop/Desktop-components/Header";
 import { useEffect, useState } from "react";
 import "./Blog.css";
 

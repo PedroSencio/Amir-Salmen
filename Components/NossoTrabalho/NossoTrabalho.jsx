@@ -1,5 +1,5 @@
 import "./NossoTrabalho.css";
-import Header from "./Desktop-components/Header";
+import Header from "../Desktop/Desktop-components/Header";
 
 const focusAreas = [
     {
@@ -12,7 +12,8 @@ const focusAreas = [
             "Acompanhamento de denúncias de maus-tratos",
             "Campanhas de adoção e castração solidária"
         ],
-        color: "animal"
+        color: "animal",
+        link: "/Screenshot 2026-01-26 at 4.52.55 PM.png"
     },
     {
         tag: "Proteção aos Vulneráveis",
@@ -24,7 +25,8 @@ const focusAreas = [
             "Programas educativos em escolas e comunidades",
             "Parcerias para acolhimento imediato"
         ],
-        color: "social"
+        color: "social",
+        link: "/Screenshot 2026-01-26 at 4.53.50 PM.png"
     }
 ];
 
@@ -65,6 +67,7 @@ export default function NossoTrabalhoDesktop() {
                     {focusAreas.map(area => (
                         <article key={area.tag} className={`work-card ${area.color}`}>
                             <span>{area.tag}</span>
+                            <img src={area.link} alt="" />
                             <h2>{area.title}</h2>
                             <p>{area.description}</p>
                             <ul>

@@ -117,3 +117,7 @@
         text-align: center;
     }
 }
+
+.form-copy a {
+    color: rgb(45, 89, 221);
+}
