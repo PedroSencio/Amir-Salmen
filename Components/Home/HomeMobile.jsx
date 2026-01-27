@@ -110,7 +110,7 @@ export default function HomeMobile() {
                     <span>
                     Compartilhe seu caso, dúvida ou denúncia. Respondemos pessoalmente cada mensagem recebida.
                     </span>
-                    <span>Precisa de ajuda? <a href="/ajuda">clique aqui</a></span>
+                    <span>Precisa de ajuda? <a href="https://delegadoamirsalmen.netlify.app/ajuda">clique aqui</a></span>
                 </div>
 
                 <form className="contact-form-mobile" onSubmit={handleSubmit}>
