@@ -1,12 +1,16 @@
 import HeaderMobile from "../Mobile/Mobile-components/HeaderMobile";
 import "./HomeMobile.css"
 import { useState } from "react";
+import React from "react";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function HomeMobile() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [num, setNum] = useState("");
     const [desc, setDesc] = useState("");
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
     e.preventDefault();
@@ -110,7 +114,18 @@ export default function HomeMobile() {
                     <span>
                     Compartilhe seu caso, dúvida ou denúncia. Respondemos pessoalmente cada mensagem recebida.
                     </span>
-                    <span>Precisa de ajuda? <a href="delegadoamirsalmen.netlify.app/ajuda">clique aqui</a></span>
+                    <span>
+                        Precisa de ajuda?{" "}
+                        <a
+                            href="#"
+                            onClick={(e) => {
+                            e.preventDefault();
+                            navigate("/ajuda");
+                            }}
+                        >
+                            clique aqui
+                        </a>
+                    </span>
                 </div>
 
                 <form className="contact-form-mobile" onSubmit={handleSubmit}>
