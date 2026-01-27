@@ -119,7 +119,6 @@ export default function HomeMobile() {
                         <a
                             href="#"
                             onClick={(e) => {
-                            e.preventDefault();
                             navigate("/ajuda");
                             }}
                         >
