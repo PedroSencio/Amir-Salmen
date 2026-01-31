@@ -24,7 +24,7 @@ export default function HeaderMobile() {
             <header id="header-mobile">
                 <button className="logo" onClick={() => handleNavigate("/")}>
                     <img src="/ff68a751-411c-4560-b36f-4e3ea0f7b093.png" alt="Logo Amir Salmen" />
-                    <span>Amir Salmen</span>
+                    <span>Delegado Amir Salmen</span>
                 </button>
                 <button
                     id="barra-funcoes"
