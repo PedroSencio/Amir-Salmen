@@ -1,5 +1,6 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import useSeo from "../../src/hooks/useSeo";
 
 const fallbackSiteUrl =
   (import.meta.env.VITE_SITE_URL?.replace(/\/$/, "") ||
@@ -24,35 +25,25 @@ export default function PageSEO({
     : `/${resolvedPath}`;
   const canonical = `${fallbackSiteUrl}${normalizedPath}`;
 
-  return (
-    <Helmet>
-      <html lang="pt-BR" />
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords.length ? (
-        <meta name="keywords" content={keywords.join(", ")} />
-      ) : null}
-      <meta name="author" content="Delegado Amir Salmen" />
-      <meta name="robots" content="index,follow" />
-      <link rel="canonical" href={canonical} />
+  useSeo({
+    title,
+    description,
+    keywords,
+    image,
+    url: canonical,
+    type
+  });
 
-      <meta property="og:locale" content="pt_BR" />
-      <meta property="og:type" content={type} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={image} />
+  useEffect(() => {
+    if (!jsonLd) return;
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(jsonLd);
+    document.head.appendChild(script);
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [jsonLd]);
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-
-      {jsonLd ? (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
-      ) : null}
-    </Helmet>
-  );
+  return null;
 }
