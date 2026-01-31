@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding-top: 70px;
 }
 
 body, html, root {
@@ -51,6 +52,13 @@ body, html, root {
     font-size: 15px;
     font-weight: 700;
     margin: 0;
+}
+
+#top-view2 {
+    display: flex;
+    width: 90%;
+    justify-content: start;
+    margin-bottom: 8px;
 }
 
 
@@ -199,87 +207,164 @@ body, html, root {
 /* VIEW 3 */
 
 #view3 {
-    padding-top: 40px;
-    height: auto;
-    padding-bottom: 80px;
+    padding: 40px 0 70px;
     width: 100%;
-    background-color: rgb(220, 220, 220);
+    background-color: #e6e6e6;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    gap: 18px;
     align-items: center;
 }
 
-#view3 h1 {
-    font-weight: 800;
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    color: black;
-}
-#missao-mobile {
+.mission-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 80%;
-    align-items: center;
-}
-#missao-mobile h2{
-    color: black;
-    font-size: 16px;
-    text-align: left;
-    font-weight: 500;
 }
 
-#blocos{
+.mission-card > * {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+
+.mission-card .pill {
+    margin-top: 16px;
+}
+
+.mission-tags {
+    margin-bottom: 16px;
+}
+
+.mission-card h1 {
+    font-size: 22px;
+    margin: 10px 18px 0 18px;
+    color: #121212;
+}
+
+.mission-copy {
+    margin: 2px 18px 0 18px;
+    color: #4a4a4a;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.mission-tags {
     display: flex;
-    height: auto;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.pill {
+    margin-left: 18px !important;
+}
+
+.tag {
+    background: #f2f2f2;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #444;
+    font-weight: 600;
+}
+
+.mission-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    width: 80%;
+}
+
+.stat-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    gap: 15px;
-
+    gap: 6px;
 }
 
-.bloco{
+.stat-head {
     display: flex;
-    height: 60px;
-    width: 75%;
-    flex-direction: row;
     align-items: center;
-    gap: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    border: 1px solid rgba(46, 46, 46, 0.462);
-    justify-content: center;
-    
+    gap: 8px;
 }
 
-.bloco h2{
-    color: rgb(66, 66, 66);
-    font-size: 16px;
-    font-weight: 500;
+.label {
+    font-size: 13px;
+    color: #4a4a4a;
+    font-weight: 600;
 }
 
-.bloco h1 {
-    color: rgb(255, 115, 0) !important;
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff9b1f, #ff5e00);
+    box-shadow: 0 0 0 4px rgba(255, 143, 0, 0.2);
+}
+
+.dot.green {
+    background: linear-gradient(45deg, #2bc48a, #0f9d58);
+    box-shadow: 0 0 0 4px rgba(15, 157, 88, 0.16);
+}
+
+.stat-card strong {
+    font-size: 24px;
+    color: #ff7a00;
+}
+
+#head-view4 {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    text-align: left;
+}
+
+#head-view4 .pill {
+    margin: 0 !important;
+}
+
+#head-view4 .news-title {
+    font-size: 22px;
+    margin: 0;
+    color: #121212;
+}
+
+#head-view4 .news-copy {
+    font-size: 14px;
+    margin: 0;
+    color: #4a4a4a;
 }
 
 #btn-missao{
-    width: 75%;
-    border-radius: 20px;
-    height: 60px;
-    background-color: orange;
-    color: black;
+    margin-top: 4px;
+    width: 80%;
+    border-radius: 14px;
+    height: 54px;
+    background: linear-gradient(45deg, #ff9b1f, #ff5e00);
+    color: #0c0c0c;
     display: flex;
     flex-direction: row;
     border: 0;
     align-items: center;
     position: relative;
-    padding: 20px;
+    padding: 0 18px;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 0 14px 30px rgba(255, 94, 0, 0.32);
 }
 
 #seta{
     position: absolute;
-    right: 20px;
+    right: 18px;
+    font-size: 18px;
 }
 
 /* VIEW4 */
@@ -288,7 +373,7 @@ body, html, root {
     height: auto;
     padding-bottom: 80px;
     width: 100%;
-    background-color: rgb(220, 220, 220);
+    background-color: #e6e6e6;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -317,23 +402,39 @@ body, html, root {
 .card-noticia {
   min-width: 85%; /* controla quantos cards aparecem */
   scroll-snap-align: start;
-
   background: #fff;
   border-radius: 12px;
   padding: 12px;
+  position: relative;
 }
 
 .card-noticia img {
   width: 100%;
-  height: 150px;
+  height: 280px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .card-noticia h2 {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
   margin: 10px 0 5px 0;
   color: black;
+  margin-bottom: 40px
+}
+
+#button-card {
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+    background-color: rgb(255, 145, 0);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    height: 30px;
+    width: 180px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .card-noticia p {

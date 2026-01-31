@@ -1,12 +1,28 @@
 import "./Noticias.css";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Desktop/Desktop-components/Header";
+import { carregarNoticias } from "../../src/lib/api.js";
+import PageSEO from "../common/PageSEO";
+import { seoContent } from "../common/seoContent";
 
 export default function NoticiasDesktop() {
+    const [cards, setCards] = useState([]);
+
     const handleOpen = url => {
         if (!url) return;
         window.open(url, "_blank", "noopener,noreferrer");
     };
+
+    useEffect(() => {
+        async function loadNoticias() {
+            try {
+                const data = await carregarNoticias();
+                setCards(data);
+            } catch (error) {
+                console.error("Erro ao carregar notícias:", error);
+            }}
+        loadNoticias();
+    }, []);
 
     const categorias = {
         1 : "Ação Institucional",
@@ -20,10 +36,9 @@ export default function NoticiasDesktop() {
         3: "tag-podcast"
     };
 
-    const cards = useState([]);
-
     return (
         <div>
+            <PageSEO {...seoContent.noticias} />
             <Header />
             <section id="view-noticias">
                 <div className="news-header">
@@ -34,7 +49,7 @@ export default function NoticiasDesktop() {
 
                 <div className="news-top-bar">
                     <div className="news-pill">Atualizado em tempo real</div>
-                    <button className="news-cta" type="button" onClick={() => handleOpen("https://www.instagram.com")}>
+                    <button className="news-cta" type="button" onClick={() => handleOpen("https://www.instagram.com/delegadoamirsalmen/")}>
                         Ver todas as publicações
                     </button>
                 </div>

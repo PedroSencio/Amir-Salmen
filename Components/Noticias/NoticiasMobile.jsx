@@ -1,6 +1,9 @@
 import "./NoticiasMobile.css";
 import HeaderMobile from "../Mobile/Mobile-components/HeaderMobile";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import PageSEO from "../common/PageSEO";
+import { seoContent } from "../common/seoContent";
+import { carregarNoticias } from "../../src/lib/api";
 
 export default function NoticiasMobile() {
   const handleOpen = (url) => {
@@ -20,11 +23,28 @@ export default function NoticiasMobile() {
     3: "tag-podcast"
   };
 
-  // depois você liga no backend
-  const [cards] = useState([]);
+  const [cards, setCards] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [erro, setErro] = useState("");
+
+  useEffect(() => {
+    async function load() {
+      try {
+        const data = await carregarNoticias();
+        setCards(data || []);
+      } catch (e) {
+        console.error("Erro ao carregar notícias mobile:", e);
+        setErro("Não foi possível carregar as notícias agora.");
+      } finally {
+        setLoading(false);
+      }
+    }
+    load();
+  }, []);
 
   return (
     <div id="noticias-mobile">
+      <PageSEO {...seoContent.noticias} />
       <HeaderMobile />
 
       {/* HEADER */}
@@ -41,27 +61,40 @@ export default function NoticiasMobile() {
         <div className="news-pill-mobile">Atualizado em tempo real</div>
         <button
           className="news-cta-mobile"
-          onClick={() => handleOpen("https://www.instagram.com")}
+          onClick={() => handleOpen("https://www.instagram.com/delegadoamirsalmen/")}
         >
-          Ver todas
+          Ver todas as publicações
         </button>
       </div>
 
       {/* LISTA / CARROSSEL */}
       <section className="news-list-mobile">
-        {cards.length === 0 && (
+        {loading && (
           <div className="news-empty-mobile">
             <p>Carregando notícias...</p>
           </div>
         )}
 
-        {cards.map(item => (
+        {!loading && erro && (
+          <div className="news-empty-mobile">
+            <p>{erro}</p>
+          </div>
+        )}
+
+        {!loading && !erro && cards.length === 0 && (
+          <div className="news-empty-mobile">
+            <p>Nenhuma notícia encontrada.</p>
+          </div>
+        )}
+
+        {!loading && !erro && cards.map(item => (
           <article key={item.id} className="news-card-mobile">
             <div className="news-image-mobile">
               {item.img ? (
                 <img
                   src={`https://zayrdvyobajbklsuxupy.supabase.co/storage/v1/object/public/Amir/${item.img}`}
                   alt={item.titulo}
+                  loading="lazy"
                 />
               ) : (
                 <div className="news-image-placeholder-mobile">

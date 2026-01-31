@@ -73,11 +73,15 @@ button{
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.16);
     border-radius: 16px;
     text-align: center;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(234, 234, 234);
     border: 1px solid rgb(255, 111, 0);
-    color: black;
+    color: rgb(0, 0, 0);
     position: relative;
     overflow: hidden;
+}
+
+.numbers h2 {
+    color: rgba(230, 100, 0, 0.882);
 }
 
 .numbers:hover{
@@ -148,8 +152,8 @@ button{
 
 #right-view3 button {
     height: 50px;
-    margin-top: 30px;
-    width: 200px;
+    margin-top: 10px;
+    width: 250px;
     border: 0;
     border-radius: 12px;
     background-color: black;
@@ -197,6 +201,10 @@ button{
 
 .fade-in-right h1 {
     margin: 20px;
+}
+
+.box-in-view h1 {
+    font-weight: 700 !important;
 }
 
 .fade-in-right.show {

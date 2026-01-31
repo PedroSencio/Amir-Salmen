@@ -2,13 +2,15 @@ import "./Ajuda.css";
 import Header from "../Desktop/Desktop-components/Header";
 import { useEffect, useState } from "react";
 import HeaderMobile from "../Mobile/Mobile-components/HeaderMobile";
+import PageSEO from "../common/PageSEO";
+import { seoContent } from "../common/seoContent";
 
 export default function Ajuda() {
     const [isMobile, setIsMobile] = useState(false);
 
   const handleWhatsapp = () => {
     window.open(
-      "https://wa.me/5543991959633?text=Olá,%20preciso%20de%20orientação%20para%20uma%20denúncia.",
+      "https://wa.me/5543991616441?text=Olá,%20preciso%20de%20orientação%20para%20uma%20denúncia.",
       "_blank"
     );
   };
@@ -26,6 +28,7 @@ export default function Ajuda() {
 
   return (
     <div id="como-denunciar-page">
+    <PageSEO {...seoContent.ajuda} />
     {/* Usa o header correto de acordo com a largura da tela */}
     {isMobile ? <HeaderMobile /> : <Header />}
 

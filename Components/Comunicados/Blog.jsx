@@ -1,6 +1,8 @@
 import Header from "../Desktop/Desktop-components/Header";
 import { useEffect, useState } from "react";
 import "./Blog.css";
+import PageSEO from "../common/PageSEO";
+import { seoContent } from "../common/seoContent";
 
 export default function BlogDesktop() {
     const [posts, setPosts] = useState([]);
@@ -55,6 +57,7 @@ export default function BlogDesktop() {
 
     return (
         <div>
+            <PageSEO {...seoContent.blog} />
             <Header />
 
             <div id="all-p">

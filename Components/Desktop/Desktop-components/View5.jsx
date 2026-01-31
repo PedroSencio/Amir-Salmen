@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./View5.css";
 
 export default function View5() {
@@ -8,12 +8,32 @@ export default function View5() {
     const [desc, setDesc] = useState("")
     const [status, setStatus] = useState("")
 
+    useEffect(() => {
+        const elements = document.querySelectorAll(".reveal-up");
+        if (!elements.length) return;
+
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        elements.forEach(el => observer.observe(el));
+        return () => observer.disconnect();
+    }, []);
+
 
     async function handleSubmit(e) {
         e.preventDefault()
         setStatus("")
 
-        fetch("http://127.0.0.1:5000/", {
+        fetch("http://127.0.0.1:5001/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +71,7 @@ export default function View5() {
 
     return (
         <section id="view5">
-            <div className="form-copy">
+            <div className="form-copy reveal-up">
                 <p>Contato</p>
                 <h1>Fale conosco</h1>
                 <span>
@@ -59,7 +79,12 @@ export default function View5() {
                 </span>
                 <span>Precisa de ajuda? <a href="/ajuda">clique aqui</a></span>
             </div>
-            <form id="contact-form" onSubmit={handleSubmit}>
+            <form
+                id="contact-form"
+                className="reveal-up"
+                style={{ transitionDelay: "0.12s" }}
+                onSubmit={handleSubmit}
+            >
                 <div className="input-group">
                     <label htmlFor="name">Nome completo</label>
                     <input

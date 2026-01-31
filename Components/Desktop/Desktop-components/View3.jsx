@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./View3.css";
+import { useNavigate } from "react-router-dom";
 
 export default function View3() {
     useEffect(() => {
@@ -67,24 +68,29 @@ export default function View3() {
         return () => observer.disconnect();
     }, []);
 
+    const naviagate = useNavigate();
+
     return (
         <div id="box-view3">
             <div id="up-view3">
                 <div id="left-view3">
-                    <img src="/amir2.png" alt="" />
+                    <img src="/amir2.png" alt="Delegado Amir Salmen" loading="lazy" />
                 </div>
                 <div className="fade-in-right" id="right-view3">
-                    <h1>Nossa Missão</h1>
-                    <div id="line-2"></div>
+                    <div className="box-in-view">
+                        <p className="box-all">Nossa Missão</p>
+                        <h1>Proteção e proximidade com a sociedade</h1>
+                    </div>
                     <h2 className="texto-view">Minha missão é <strong>proteger</strong> os direitos dos animais e das pessoas vulneráveis, promovendo a conscientização e a ação em prol de um mundo mais justo e compassivo.</h2>
                     <h2 className="texto-view">Através de campanhas educativas, resgates e apoio comunitário, busco criar um impacto positivo na vida daqueles que não podem se defender por si mesmos.</h2>
                     <h2 className="texto-view">Acredito que cada indivíduo tem o poder de fazer a diferença, e meu objetivo é inspirar e mobilizar outros a se juntarem a essa causa vital.</h2>
-                    <button>Saiba Mais</button>
+                    <button onClick={() => {
+                        window.location.assign("/nosso-trabalho")
+                    }}
+                    >Saiba Mais</button>
                 </div>
             </div>
             <div id="down-view3">
-                <h1>Impacto do nosso trabalho</h1>
-                    <div id="line-2"></div>
                 <div id="faixa-lateral">
                     <div className="numbers">
                         <h2 className="counter-value" data-target="50" data-suffix="+">0+</h2>

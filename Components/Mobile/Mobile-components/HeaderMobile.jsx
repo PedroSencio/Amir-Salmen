@@ -20,7 +20,7 @@ export default function HeaderMobile() {
     }
 
     return (
-        <>
+        <div id="all-head">
             <header id="header-mobile">
                 <button className="logo" onClick={() => handleNavigate("/")}>
                     <img src="/ff68a751-411c-4560-b36f-4e3ea0f7b093.png" alt="Logo Amir Salmen" />
@@ -57,7 +57,7 @@ export default function HeaderMobile() {
                 </nav>
                 <a
                     className="menu-whatsapp"
-                    href="https://wa.me/5543991959633?text=Olá,%20vim%20pelo%20site!"
+                    href="https://wa.me/5543991616441?text=Olá,%20vim%20pelo%20site!"
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -65,6 +65,6 @@ export default function HeaderMobile() {
                 </a>
             </div>
             {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)} />}
-        </>
+        </div>
     );
 }

@@ -43,7 +43,7 @@
 .news-grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 26px;
     align-items: stretch;
 }
@@ -99,9 +99,15 @@
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
 }
 
-.tag-acao { background: #ffb25f; }
-.tag-agenda { background: #7ed7ff; }
-.tag-podcast { background: #b5a1ff; }
+.acao,
+.tag-acao { background: #ff6a00c6 !important;
+color: white !important; }
+.agenda,
+.tag-agenda { background: #12b4ffbe !important;
+color: white !important; }
+.podcast,
+.tag-podcast { background: #8c75ffbe !important;
+color: white !important;}
 
 .news-date-chip {
     position: absolute;

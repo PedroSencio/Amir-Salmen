@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <div id="header-box">
             <div onClick={() => navigate("/")} id="logo-header">
-                <img src="/ff68a751-411c-4560-b36f-4e3ea0f7b093.png" alt="" />
+                <img src="/ff68a751-411c-4560-b36f-4e3ea0f7b093.png" alt="Logotipo do Delegado Amir Salmen" />
                 <h2>Delegado Amir Salmen</h2>
             </div>
             <div id="botoes-header">
