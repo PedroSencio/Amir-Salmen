@@ -33,9 +33,9 @@ export default function View2() {
                     <p className="box-all">SOBRE</p>
                     <h1>Delegado Amir Salmen</h1>
                 </div>
-                <h2>Amir Salmen é uma figura dedicada à proteção dos direitos dos <strong>animais</strong> e das pessoas <strong>vulneráveis.</strong></h2>
-                <h2>Com uma trajetória marcada por ações humanitárias e campanhas de conscientização, Amir tem se destacado como um defensor incansável daqueles que não podem se defender por si mesmos.</h2>
-                <h2>Sua paixão pela justiça social e pelo bem-estar animal resultou na criação e apoio a iniciativas que resgatam vidas, fortalecem comunidades e inspiram o engajamento social.</h2>
+                <h2>Delegado Amir Salmen é a liderança em <strong>segurança pública</strong>, aliando técnica investigativa a ações de <strong>proteção animal</strong> e apoio a pessoas vulneráveis.</h2>
+                <h2>Com operações integradas, trabalho de inteligência e campanhas educativas, ele aproxima a Polícia Civil da comunidade e amplia a rede de cuidado.</h2>
+                <h2>Resultados concretos, transparência e presença em campo marcam a trajetória de quem escolheu servir e proteger com responsabilidade social.</h2>
                     <div id="buttons-view2">
                         <button
                             id="leia"

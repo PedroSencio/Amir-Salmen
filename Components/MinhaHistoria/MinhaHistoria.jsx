@@ -77,7 +77,7 @@ export default function MinhaHistoriaDesktop() {
         {/* HERO */}
         <div className="hero-grid reveal-up">
           <div className="trajetoria-hero">
-            <p className="pill">🧭 Minha Trajetória</p>
+            <p className="pill">Minha Trajetória</p>
             <h1>Uma jornada guiada por valores, família e serviço público</h1>
             <span>
               Da infância marcada por movimentos sociais à liderança na segurança
@@ -107,7 +107,7 @@ export default function MinhaHistoriaDesktop() {
         <div className="story-section">
           <div className="story-block text-first reveal-up">
             <div className="story-text">
-              <h3>🌍 Um nascimento em um mundo em ebulição</h3>
+              <h3>Um nascimento em um mundo em ebulição</h3>
               <p>
                 Nasci em 10 de novembro de 1968, em um domingo marcado por profundas
                 transformações no Brasil e no mundo. O país vivia os dias que antecederiam
@@ -139,7 +139,7 @@ export default function MinhaHistoriaDesktop() {
               />
             </div>
             <div className="story-text">
-              <h3>👨‍👩‍👦 Família: onde tudo começou</h3>
+              <h3>Família: onde tudo começou</h3>
               <p>
                 Cresci em uma família profundamente conectada ao serviço público, à
                 educação e ao cuidado com as pessoas. Meu pai, Fauez Mahmoud Salmen
@@ -161,7 +161,7 @@ export default function MinhaHistoriaDesktop() {
 
           <div className="story-block text-first reveal-up" style={{ transitionDelay: "0.12s" }}>
             <div className="story-text">
-              <h3>❤️ Família, amor e construção de vida</h3>
+              <h3>Família, amor e construção de vida</h3>
               <p>
                 Em 1987, iniciei uma história de amor com Sônia Maria Meneguim, construída
                 em um tempo em que as relações eram fortalecidas por cartas, espera e
@@ -254,7 +254,7 @@ export default function MinhaHistoriaDesktop() {
               )}
             </div>
             <div className="story-text">
-              <h3>🎓 Formações: conhecimento em constante evolução</h3>
+              <h3>Formações: conhecimento em constante evolução</h3>
               <p>
                 Minha trajetória acadêmica foi construída de forma progressiva, unindo
                 prática, técnica, direito e tecnologia, sempre orientada pelo compromisso
@@ -281,95 +281,99 @@ export default function MinhaHistoriaDesktop() {
         </div>
 
         {/* BLOCO INFORMATIVO PÓS-FORMAÇÃO */}
-        <div className="tech-section reveal-up" style={{ transitionDelay: "0.2s" }}>
-          <div className="tech-heading">
-            <p className="pill">Segurança pública em foco</p>
-            <h2>Atuação, resultados e valores que sustentam minha carreira</h2>
-            <span>
-              Um olhar mais analítico e contemporâneo sobre as frentes de trabalho e as
-              conquistas que traduzem a missão de servir com técnica e humanidade.
-            </span>
-          </div>
+        {/* BLOCO INFORMATIVO PÓS-FORMAÇÃO */}
+<div className="focus-wrap reveal-up" style={{ transitionDelay: "0.2s" }}>
+  <header className="focus-head">
+    <p className="pill">Segurança pública em foco</p>
+    <h2>Como atuo hoje</h2>
+    <p className="focus-sub">
+      Resultados, decisões e frentes prioritárias apresentados de forma clara e direta.
+    </p>
+  </header>
 
-          <div className="metrics-row">
-            <div className="metric-card">
-              <small>Resolução de homicídios (2024)</small>
-              <strong>≈90%</strong>
-              <p>30 de 33 ocorrências solucionadas pela equipe sob minha liderança.</p>
-            </div>
-            <div className="metric-card">
-              <small>Delegacia especializada</small>
-              <strong>Proteção aos Animais</strong>
-              <p>Primeira da região, ampliando atendimento e combate aos maus-tratos.</p>
-            </div>
-          </div>
+  <div className="focus-grid">
+    {/* CARD PRINCIPAL */}
+    <section className="focus-main">
+      <div className="focus-main-top">
+        <span className="focus-badge">Dado-chave</span>
+        <h3>Resolução de homicídios (2024)</h3>
+      </div>
 
-          <div className="tech-grid">
-            <article className="tech-card">
-              <div className="tech-tag">👮‍♂️ Segurança Pública</div>
-              <h3>A escolha pela segurança pública</h3>
-              <p>
-                A formação jurídica encontrou sentido na atuação direta em favor da
-                sociedade. Como Delegado da Polícia Civil do Estado do Paraná, aplico
-                conhecimento técnico, equilíbrio emocional, liderança e sensibilidade
-                social para garantir justiça e proteção às pessoas.
-              </p>
-            </article>
+      <div className="focus-metric">
+        <div className="focus-metric-number">≈90%</div>
+        <div className="focus-metric-desc">30 de 33 casos solucionados pela equipe.</div>
+      </div>
 
-            <article className="tech-card">
-              <div className="tech-tag">🏛️ Liderança</div>
-              <h3>Liderança e responsabilidade institucional</h3>
-              <p>
-                Delegado-Chefe da 12ª Subdivisão Policial de Jacarezinho (PR), conduzindo
-                equipes, estruturando investigações e entregando respostas rápidas à
-                sociedade com visão estratégica e organização.
-              </p>
-            </article>
+      <div className="focus-tags">
+        <span className="tag">Planejamento</span>
+        <span className="tag">Respostas rápidas</span>
+        <span className="tag">Equipe especializada</span>
+      </div>
 
-            <article className="tech-card">
-              <div className="tech-tag">📊 Resultados</div>
-              <h3>Resultados que representam justiça</h3>
-              <p>
-                Números que significam vidas: investigações solucionadas, confiança
-                fortalecida e famílias que recebem respostas. Cada caso concluído reafirma
-                o compromisso institucional com a sociedade.
-              </p>
-            </article>
+      <div className="focus-divider" />
 
-            <article className="tech-card">
-              <div className="tech-tag">🐾 Proteção animal</div>
-              <h3>Proteção animal e sensibilidade social</h3>
-              <p>
-                Implantação da primeira Delegacia de Proteção aos Animais da região, ampliando
-                a atuação policial para causas de maus-tratos e reforçando uma postura mais
-                humana e consciente.
-              </p>
-            </article>
-
-            <article className="tech-card wide">
-              <div className="tech-tag">✨ Missão</div>
-              <h3>Segurança pública como missão</h3>
-              <p>
-                Segurança pública se constrói com técnica, ética e humanidade. Cada decisão,
-                investigação e ação carrega impacto direto na vida das pessoas, guiando minha
-                conduta diária.
-              </p>
-              <div className="quote-inline">
-                <span>“Planejamento, dados e respeito às pessoas.”</span>
-              </div>
-            </article>
-
-            <article className="tech-card wide">
-              <div className="tech-tag">✨ Valores</div>
-              <h3>Uma trajetória guiada por valores</h3>
-              <p>
-                União entre família, estudo, serviço público e compromisso social. Da formação
-                técnica à atualização tecnológica, cada etapa reforça ética, responsabilidade e
-                respeito às pessoas.
-              </p>
-            </article>
-          </div>
+      <div className="focus-mini-stats">
+        <div className="mini-stat">
+          <span className="mini-stat-label">Operações</span>
+          <span className="mini-stat-value">40+</span>
         </div>
+        <div className="mini-stat">
+          <span className="mini-stat-label">Frentes</span>
+          <span className="mini-stat-value">3</span>
+        </div>
+        <div className="mini-stat">
+          <span className="mini-stat-label">Foco</span>
+          <span className="mini-stat-value">Resposta</span>
+        </div>
+      </div>
+    </section>
+
+    {/* LISTA DE CARDS */}
+    <section className="focus-list">
+      <article className="focus-card">
+        <p className="focus-kicker">Operações</p>
+        <h4>Integração e resposta</h4>
+        <p>
+          Mais de 40 operações conjuntas com forças locais e estaduais para reduzir a criminalidade.
+        </p>
+      </article>
+
+      <article className="focus-card">
+        <p className="focus-kicker">Delegacia Especializada</p>
+        <h4>Proteção aos Animais</h4>
+        <p>
+          Pioneira na região, ampliando atendimento e combate a maus-tratos com postura humanizada.
+        </p>
+      </article>
+
+      <article className="focus-card">
+        <p className="focus-kicker">Comando</p>
+        <h4>Coordenação da 12ª SDP</h4>
+        <p>
+          Gestão de equipes, metas claras e transparência para entregar respostas rápidas à sociedade.
+        </p>
+      </article>
+    </section>
+  </div>
+
+  {/* FAIXA FINAL: missão e valores */}
+  <footer className="focus-footer">
+    <div className="focus-foot-card">
+      <span className="foot-tag">Missão</span>
+      <h3>Segurança com humanidade</h3>
+      <p>Técnica, ética e respeito às pessoas orientam cada investigação.</p>
+    </div>
+
+    <div className="focus-foot-card">
+      <span className="foot-tag">Valores</span>
+      <h3>Compromisso diário</h3>
+      <p>
+        Família, serviço público e responsabilidade social unidos para proteger quem mais precisa.
+      </p>
+    </div>
+  </footer>
+</div>
+
       </section>
     </div>
   );
