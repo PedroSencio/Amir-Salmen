@@ -75,7 +75,7 @@ export default function NossoTrabalhoDesktop() {
   return (
     <div>
       <PageSEO {...seoContent.trabalho} />
-      <Header />
+      <Header color="light" />
       <main id="nosso-trabalho">
         {/* HERO */}
         <section className="work-hero reveal-up">
@@ -111,7 +111,7 @@ export default function NossoTrabalhoDesktop() {
               <p>Pessoas acolhidas em ações sociais</p>
             </div>
             <div className="data-card secondary">
-              <strong>15</strong>
+              <strong className="num-laranja">15</strong>
               <p>Campanhas ativas em 2024</p>
             </div>
           </div>

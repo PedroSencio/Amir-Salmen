@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./View1.css";
 
 export default function View1() {
@@ -11,6 +11,21 @@ export default function View1() {
             target.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     };
+
+    const images = [
+        "/ChatGPT Image 31 de jan. de 2026, 15_26_24.png",
+        "/bc0cb358-91ba-4dfb-ac1f-639099edbd44.jpg",
+        "/b2b8485d-36f7-4e39-863f-c7d854b4515f.png"
+    ];
+    const [currentImage, setCurrentImage] = useState(0);
+    const intervalRef = useRef(null);
+
+    useEffect(() => {
+        intervalRef.current = setInterval(() => {
+            setCurrentImage(prev => (prev + 1) % images.length);
+        }, 6000);
+        return () => clearInterval(intervalRef.current);
+    }, []);
 
     useEffect(() => {
         const animatedElements = document.querySelectorAll(
@@ -40,7 +55,9 @@ export default function View1() {
 
             </div>
             <img
-                src="/ChatGPT Image 31 de jan. de 2026, 15_26_24.png"
+                key={currentImage}
+                className="hero-image"
+                src={images[currentImage]}
                 alt="Delegado Amir Salmen em campanha de proteção"
             />
             <div id="mensagem" className="message-fade">
