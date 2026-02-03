@@ -18,14 +18,18 @@ export default function View1() {
         "/b2b8485d-36f7-4e39-863f-c7d854b4515f.png"
     ];
     const [currentImage, setCurrentImage] = useState(0);
+    const [prevImage, setPrevImage] = useState(null);
     const intervalRef = useRef(null);
 
     useEffect(() => {
         intervalRef.current = setInterval(() => {
-            setCurrentImage(prev => (prev + 1) % images.length);
+            setCurrentImage(prev => {
+                setPrevImage(prev);
+                return (prev + 1) % images.length;
+            });
         }, 6000);
         return () => clearInterval(intervalRef.current);
-    }, []);
+    }, [images.length]);
 
     useEffect(() => {
         const animatedElements = document.querySelectorAll(
@@ -54,12 +58,22 @@ export default function View1() {
             <div id="black">
 
             </div>
-            <img
-                key={currentImage}
-                className="hero-image"
-                src={images[currentImage]}
-                alt="Delegado Amir Salmen em campanha de proteção"
-            />
+            <div className="hero-stack">
+                {prevImage !== null && (
+                    <img
+                        key={`prev-${prevImage}-${currentImage}`}
+                        className="hero-image hero-out"
+                        src={images[prevImage]}
+                        alt="Delegado Amir Salmen em campanha de proteção"
+                    />
+                )}
+                <img
+                    key={`curr-${currentImage}`}
+                    className="hero-image hero-in"
+                    src={images[currentImage]}
+                    alt="Delegado Amir Salmen em campanha de proteção"
+                />
+            </div>
             <div id="mensagem" className="message-fade">
                 <h2 id="top-msg">Cuidado, respeito e responsabilidade</h2>
                 <h2>"Protegendo quem não pode se defender"</h2>

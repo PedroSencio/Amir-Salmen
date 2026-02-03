@@ -107,6 +107,11 @@ h1, h2, h3 {
     transition: 0.2s ease-in-out;
 }
 
+#box-view1 .hero-stack {
+    position: absolute;
+    inset: 0;
+}
+
 #box-view1 .hero-image {
     position: absolute;
     height: 100%;
@@ -116,8 +121,8 @@ h1, h2, h3 {
     object-fit: cover;
     object-position: center;
     filter: brightness(0.45);
-    opacity: 0;
-    animation: heroFade 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 1;
+    will-change: opacity, transform;
 }
 
 #black{
@@ -171,13 +176,38 @@ h1, h2, h3 {
     transform: translateY(0);
 }
 
-@keyframes heroFade {
+.hero-in {
+    opacity: 0;
+    z-index: 1;
+    animation: heroFadeIn 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-out {
+    opacity: 1;
+    z-index: 0;
+    animation: none;
+}
+
+@keyframes heroFadeIn {
     from {
         opacity: 0;
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@keyframes heroFadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+        filter: brightness(0.45);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.995);
+        filter: brightness(0.45);
     }
 }
