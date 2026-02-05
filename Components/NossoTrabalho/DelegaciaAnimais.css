@@ -1,0 +1,386 @@
+/* ===== BASE ===== */
+#delegacia-page {
+  min-height: 100vh;
+  color: #ffffff;
+  background-color: white;
+}
+
+.container {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: min(1200px, calc(100% - 32px));
+  }
+}
+
+/* ===== HERO ===== */
+.hero-delegacia {
+  padding: 96px 0 28px;
+    background:
+    radial-gradient(circle at 18% 18%, rgba(255, 155, 31, 0.18), transparent 38%),
+    radial-gradient(circle at 86% 10%, rgba(255, 94, 0, 0.14), transparent 40%),
+    linear-gradient(180deg, #0b0b0d 0%, #070708 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.20fr 0.95fr;
+  gap: 100px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero-copy span {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.hero-chips-dark .chip-dark {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 143, 0, 0.12);
+  color: #ffb35f;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.pill-dark {
+  background: rgba(255, 143, 0, 0.18);
+}
+
+/* ===== MAP CARD ===== */
+.map-frame {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(145deg, rgba(255, 143, 0, 0.22), rgba(0, 0, 0, 0.65));
+}
+
+.map-frame img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+}
+
+.map-badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(12, 12, 12, 0.78);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.map-badge small {
+  display: block;
+  color: #f1c488;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+.map-badge strong {
+  display: block;
+  font-size: 14px;
+}
+
+.map-badge span {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+}
+
+/* ===== VIEW2 (BRANCO) ===== */
+.view2-delegacia.light {
+  padding: 90px 0 100px;
+  background-color: white;
+  color: #0c0c0c;
+}
+
+.view2-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 38px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .view2-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.carousel-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 14px 16px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 80%, transparent 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.carousel-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.carousel-actions button {
+  border: none;
+  background: #0f0f0f;
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.carousel-actions button:hover {
+  transform: translateY(-2px);
+  background: #ff7b1f;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dot.active {
+  background: #ff7b1f;
+}
+
+.view2-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.view2-copy.white h2 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.22;
+  color: #0b0b0b;
+}
+
+.view2-copy.white p {
+  margin: 0;
+  color: #2a2a2a;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.view2-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.chip-light {
+  background: rgba(15, 15, 15, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #0d0d0d;
+}
+
+.pill-light {
+  background: rgba(255, 143, 0, 0.15);
+  color: #b85700;
+}
+
+/* ===== AREAS SECTION ===== */
+.areas-section {
+  background: #ffffff;
+  padding: 90px 0 110px;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
+.areas-list h3 {
+  margin: 10px 0 12px;
+  font-size: 30px;
+  color: #0b0b0b;
+}
+
+.areas-copy {
+  margin: 0 0 16px;
+  color: #343434;
+  line-height: 1.6;
+}
+
+.municipios {
+  list-style: disc;
+  list-style-position: inside;
+  column-count: 2;
+  column-gap: 32px;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.municipios li {
+  margin: 4px 0;
+  padding-left: 6px;
+  color: #171717;
+  font-weight: 600;
+  font-size: 15px;
+  break-inside: avoid;
+}
+
+@media (max-width: 640px) {
+  .municipios {
+    column-count: 1;
+  }
+}
+
+.location-card {
+  background: #0f0f0f;
+  color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12);
+}
+
+.location-head {
+  padding: 20px 22px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.location-head strong {
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.location-head small {
+  color: #dcdcdc;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  display: block;
+}
+
+.location-note {
+  margin: 0;
+  padding: 12px 22px 20px;
+  color: #cfcfcf;
+  line-height: 1.5;
+  font-size: 15px;
+}

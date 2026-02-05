@@ -84,10 +84,14 @@ export default function View3() {
                     <h2 className="texto-view">Minha missão é <strong>proteger</strong> os direitos dos animais e das pessoas vulneráveis, promovendo a conscientização e a ação em prol de um mundo mais justo e compassivo.</h2>
                     <h2 className="texto-view">Através de campanhas educativas, resgates e apoio comunitário, busco criar um impacto positivo na vida daqueles que não podem se defender por si mesmos.</h2>
                     <h2 className="texto-view">Acredito que cada indivíduo tem o poder de fazer a diferença, e meu objetivo é inspirar e mobilizar outros a se juntarem a essa causa vital.</h2>
-                    <button onClick={() => {
-                        window.location.assign("/nosso-trabalho")
-                    }}
-                    >Saiba Mais</button>
+                    <div className="view3-actions">
+                        <button onClick={() => window.location.assign("/delegacia-dos-animais")}>
+                            Delegacia dos Animais
+                        </button>
+                        <button onClick={() => window.location.assign("/delegacia-das-pessoas")}>
+                            Delegacia das Pessoas
+                        </button>
+                    </div>
                 </div>
             </div>
             <div id="down-view3">

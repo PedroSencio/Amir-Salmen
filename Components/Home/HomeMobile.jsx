@@ -177,13 +177,22 @@ export default function HomeMobile() {
                     </div>
                 </div>
 
-                <button
-                    id="btn-missao"
-                    onClick={() => navigate("/nosso-trabalho")}
-                >
-                    <span>Saiba mais</span>
-                    <span id="seta">➤</span>
-                </button>
+                <div className="mission-actions">
+                    <button
+                        className="btn-missao"
+                        onClick={() => navigate("/delegacia-dos-animais")}
+                    >
+                        <span>Delegacia dos Animais</span>
+                        <span className="seta">➤</span>
+                    </button>
+                    <button
+                        className="btn-missao"
+                        onClick={() => navigate("/delegacia-das-pessoas")}
+                    >
+                        <span>Delegacia das Pessoas</span>
+                        <span className="seta">➤</span>
+                    </button>
+                </div>
             </div>
             <div id="view4">
                 <div className="mission-card" id="head-view4">

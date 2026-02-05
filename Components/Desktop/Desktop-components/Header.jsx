@@ -33,7 +33,9 @@ export default function Header({ color = "dark" }) {
       <div id="botoes-header">
         <button onClick={() => navigate("/minha-historia")}>Minha Trajetória</button>
         <div className="line"></div>
-        <button onClick={() => navigate("/nosso-trabalho")}>Nosso Trabalho</button>
+        <button onClick={() => navigate("/delegacia-dos-animais")}>Delegacia dos Animais</button>
+        <div className="line"></div>
+        <button onClick={() => navigate("/delegacia-das-pessoas")}>Delegacia das Pessoas</button>
         <div className="line"></div>
         <button onClick={() => navigate("/noticias")}>Notícias</button>
       </div>

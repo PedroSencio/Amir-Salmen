@@ -63,7 +63,14 @@ export default function MinhaHistoriaDesktop() {
 
             <div className="hero-photo">
               <div className="photo-frame photo-frame-dark">
-                <img src="/amir2.png" alt="Delegado Amir Salmen" />
+                <img
+                  src="/amir2.png"
+                  alt="Delegado Amir Salmen"
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="1125"
+                />
                 <div className="photo-badge">
                   <small>Desde 2003</small>
                   <strong>Polícia Civil PR</strong>
@@ -79,10 +86,6 @@ export default function MinhaHistoriaDesktop() {
             <header className="story-head reveal-up">
               <p className="pill">História e formação</p>
               <h2>Origens, família e o caminho do conhecimento</h2>
-              <p className="story-sub">
-                Uma narrativa em seções amplas, alternando texto e imagem — sem caixas,
-                com leitura fluida e foco no conteúdo.
-              </p>
             </header>
 
             {/* BLOCO 1 */}
@@ -105,7 +108,14 @@ export default function MinhaHistoriaDesktop() {
 
               <div className="story-media">
                 <div className="media-frame">
-                  <img src={storyMedia[0][0]} alt="Foto história 1" />
+                  <img
+                    src={storyMedia[0][0]}
+                    alt="Foto história 1"
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="900"
+                  />
                 </div>
               </div>
             </div>
@@ -117,7 +127,14 @@ export default function MinhaHistoriaDesktop() {
             >
               <div className="story-media">
                 <div className="media-frame">
-                  <img src={storyMedia[1][0]} alt="Foto história 2" />
+                  <img
+                    src={storyMedia[1][0]}
+                    alt="Foto história 2"
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="900"
+                  />
                 </div>
               </div>
 
@@ -169,6 +186,10 @@ export default function MinhaHistoriaDesktop() {
                   <img
                     src={storyMedia[2][carouselIndex[2]]}
                     alt={`Foto história 3 - ${carouselIndex[2] + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="900"
                   />
 
                   {storyMedia[2].length > 1 && (
@@ -218,6 +239,10 @@ export default function MinhaHistoriaDesktop() {
                   <img
                     src={storyMedia[3][carouselIndex[3]]}
                     alt={`Foto história 4 - ${carouselIndex[3] + 1}`}
+                    loading="lazy"
+                    decoding="async"
+                    width="1200"
+                    height="900"
                   />
 
                   {storyMedia[3].length > 1 && (
@@ -284,98 +309,36 @@ export default function MinhaHistoriaDesktop() {
           </div>
         </section>
 
-        {/* ===================== COMO ATUO HOJE (MANTIDO) ===================== */}
-        <section className="focus-section">
-          <div className="container">
-            <div className="focus-wrap reveal-up" style={{ transitionDelay: "0.2s" }}>
-              <header className="focus-head">
-                <p className="pill">Segurança pública em foco</p>
-                <h2>Como atuo hoje</h2>
-                <p className="focus-sub">
-                  Resultados, decisões e frentes prioritárias apresentados de forma clara e direta.
-                </p>
-              </header>
-
-              <div className="focus-grid">
-                <section className="focus-main">
-                  <div className="focus-main-top">
-                    <span className="focus-badge">Dado-chave</span>
-                    <h3>Resolução de homicídios (2024)</h3>
-                  </div>
-
-                  <div className="focus-metric">
-                    <div className="focus-metric-number">≈90%</div>
-                    <div className="focus-metric-desc">
-                      30 de 33 casos solucionados pela equipe.
-                    </div>
-                  </div>
-
-                  <div className="focus-tags">
-                    <span className="tag">Planejamento</span>
-                    <span className="tag">Respostas rápidas</span>
-                    <span className="tag">Equipe especializada</span>
-                  </div>
-
-                  <div className="focus-divider" />
-
-                  <div className="focus-mini-stats">
-                    <div className="mini-stat">
-                      <span className="mini-stat-label">Operações</span>
-                      <span className="mini-stat-value">40+</span>
-                    </div>
-                    <div className="mini-stat">
-                      <span className="mini-stat-label">Frentes</span>
-                      <span className="mini-stat-value">3</span>
-                    </div>
-                    <div className="mini-stat">
-                      <span className="mini-stat-label">Foco</span>
-                      <span className="mini-stat-value">Resposta</span>
-                    </div>
-                  </div>
-                </section>
-
-                <section className="focus-list">
-                  <article className="focus-card">
-                    <p className="focus-kicker">Operações</p>
-                    <h4>Integração e resposta</h4>
-                    <p>
-                      Mais de 40 operações conjuntas com forças locais e estaduais para reduzir a criminalidade.
-                    </p>
-                  </article>
-
-                  <article className="focus-card">
-                    <p className="focus-kicker">Delegacia Especializada</p>
-                    <h4>Proteção aos Animais</h4>
-                    <p>
-                      Pioneira na região, ampliando atendimento e combate a maus-tratos com postura humanizada.
-                    </p>
-                  </article>
-
-                  <article className="focus-card">
-                    <p className="focus-kicker">Comando</p>
-                    <h4>Coordenação da 12ª SDP</h4>
-                    <p>
-                      Gestão de equipes, metas claras e transparência para entregar respostas rápidas à sociedade.
-                    </p>
-                  </article>
-                </section>
+        <section className="como-atuo-historia reveal-up">
+          <div className="container como-atuo-grid">
+            <div className="como-atuo-text">
+              <p className="pill">Como atuo hoje</p>
+              <h2>Delegado Amir Salmen: presença, estratégia e cuidado</h2>
+              <p>
+                À frente das frentes de proteção a pessoas vulneráveis e animais, Amir
+                Salmen combina investigação técnica com presença em campo. Lidera equipes,
+                orienta a coleta de provas e articula com Judiciário, Ministério Público,
+                assistência social e saúde para garantir proteção imediata e responsabilização
+                de agressores.
+              </p>
+              <p>
+                A rotina inclui acompanhamento de operações prioritárias, definição de fluxos
+                que evitam revitimização e ações educativas que aproximam a população dos canais
+                de denúncia. Resultado: decisões mais rápidas, acolhimento humanizado e respostas
+                consistentes à comunidade.
+              </p>
+            </div>
+            <div className="como-atuo-photo">
+              <div className="photo-frame photo-frame-dark">
+                <img
+                  src="/amir.png"
+                  alt="Delegado Amir Salmen em serviço"
+                  loading="lazy"
+                  decoding="async"
+                  width="900"
+                  height="1200"
+                />
               </div>
-
-              <footer className="focus-footer">
-                <div className="focus-foot-card">
-                  <span className="foot-tag">Missão</span>
-                  <h3>Segurança com humanidade</h3>
-                  <p>Técnica, ética e respeito às pessoas orientam cada investigação.</p>
-                </div>
-
-                <div className="focus-foot-card">
-                  <span className="foot-tag">Valores</span>
-                  <h3>Compromisso diário</h3>
-                  <p>
-                    Família, serviço público e responsabilidade social unidos para proteger quem mais precisa.
-                  </p>
-                </div>
-              </footer>
             </div>
           </div>
         </section>

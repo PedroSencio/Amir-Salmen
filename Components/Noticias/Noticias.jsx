@@ -7,6 +7,7 @@ import { seoContent } from "../common/seoContent";
 
 export default function NoticiasDesktop() {
     const [cards, setCards] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState(0);
 
     const handleOpen = url => {
         if (!url) return;
@@ -49,6 +50,25 @@ export default function NoticiasDesktop() {
 
                 <div className="news-top-bar">
                     <div className="news-pill">Atualizado em tempo real</div>
+                    <div className="news-filters">
+                        <button
+                            className={selectedCategory === 0 ? "filter-btn active" : "filter-btn"}
+                            type="button"
+                            onClick={() => setSelectedCategory(0)}
+                        >
+                            Todas
+                        </button>
+                        {Object.entries(categorias).map(([key, label]) => (
+                            <button
+                                key={key}
+                                className={selectedCategory === Number(key) ? "filter-btn active" : "filter-btn"}
+                                type="button"
+                                onClick={() => setSelectedCategory(Number(key))}
+                            >
+                                {label}
+                            </button>
+                        ))}
+                    </div>
                     <button className="news-cta" type="button" onClick={() => handleOpen("https://www.instagram.com/delegadoamirsalmen/")}>
                         Ver todas as publicações
                     </button>
@@ -60,7 +80,9 @@ export default function NoticiasDesktop() {
                             <p>Carregando notícias...</p>
                         </div>
                     )}
-                    {cards.map(item => (
+                    {cards
+                        .filter(item => selectedCategory === 0 ? true : item.categoria === selectedCategory)
+                        .map(item => (
                         <article key={item.id} className="news-card">
                             <div className="news-image">
                                 {item.img ? (

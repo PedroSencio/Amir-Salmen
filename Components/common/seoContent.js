@@ -29,6 +29,20 @@ export const seoContent = {
     path: "/nosso-trabalho",
     keywords: [...baseKeywords, "operações", "campanhas", "acolhimento"]
   },
+  delegaciaAnimais: {
+    title: "Delegacia dos Animais | Resgate, investigação e acolhimento",
+    description:
+      "Denúncia e proteção animal com resgates 24h, investigações e rede de adoção e castração solidária.",
+    path: "/delegacia-dos-animais",
+    keywords: [...baseKeywords, "delegacia dos animais", "maus-tratos", "resgate animal"]
+  },
+  delegaciaPessoas: {
+    title: "Delegacia das Pessoas | Segurança pública e proteção a vulneráveis",
+    description:
+      "Operações integradas, investigação e rede de apoio para proteger pessoas e famílias em situação de risco.",
+    path: "/delegacia-das-pessoas",
+    keywords: [...baseKeywords, "delegacia das pessoas", "segurança", "proteção a vulneráveis"]
+  },
   noticias: {
     title: "Notícias | Atualizações das operações e campanhas",
     description:

@@ -232,7 +232,8 @@ body, html, root {
 }
 
 .mission-card .pill {
-    margin-top: 16px;
+    margin-top: 16px !important;
+    margin-left: 18px !important;
 }
 
 .mission-tags {
@@ -343,7 +344,15 @@ body, html, root {
     color: #4a4a4a;
 }
 
-#btn-missao{
+.mission-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.btn-missao{
     margin-top: 4px;
     width: 80%;
     border-radius: 14px;
@@ -361,7 +370,7 @@ body, html, root {
     box-shadow: 0 14px 30px rgba(255, 94, 0, 0.32);
 }
 
-#seta{
+.seta{
     position: absolute;
     right: 18px;
     font-size: 18px;
@@ -510,5 +519,5 @@ body, html, root {
 }
 
 #form-copy-mobile a {
-    color: rgb(45, 89, 221);
+    color: rgb(58, 102, 235) !important;
 }

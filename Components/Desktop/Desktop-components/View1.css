@@ -110,6 +110,7 @@ h1, h2, h3 {
 #box-view1 .hero-stack {
     position: absolute;
     inset: 0;
+    overflow: hidden;
 }
 
 #box-view1 .hero-image {

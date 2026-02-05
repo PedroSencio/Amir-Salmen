@@ -5,7 +5,8 @@ import "./HeaderMobile.css";
 const links = [
     { label: "Início", path: "/" },
     { label: "Minha História", path: "/minha-historia" },
-    { label: "Nosso Trabalho", path: "/nosso-trabalho" },
+    { label: "Delegacia dos Animais", path: "/delegacia-dos-animais" },
+    { label: "Delegacia das Pessoas", path: "/delegacia-das-pessoas" },
     { label: "Notícias", path: "/noticias" }
 ];
 

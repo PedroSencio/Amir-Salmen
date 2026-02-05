@@ -150,6 +150,13 @@ button{
     margin: 10px;
 }
 
+#right-view3 .view3-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-left: 69px;
+}
+
 #right-view3 button {
     height: 50px;
     margin-top: 10px;

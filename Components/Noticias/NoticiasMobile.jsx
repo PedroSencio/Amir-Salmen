@@ -26,6 +26,7 @@ export default function NoticiasMobile() {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(0);
 
   useEffect(() => {
     async function load() {
@@ -59,6 +60,25 @@ export default function NoticiasMobile() {
       {/* TOP BAR */}
       <div className="news-top-bar-mobile">
         <div className="news-pill-mobile">Atualizado em tempo real</div>
+        <div className="news-filters-mobile">
+          <button
+            type="button"
+            className={selectedCategory === 0 ? "filter-btn-mobile active" : "filter-btn-mobile"}
+            onClick={() => setSelectedCategory(0)}
+          >
+            Todas
+          </button>
+          {Object.entries(categorias).map(([key, label]) => (
+            <button
+              key={key}
+              type="button"
+              className={selectedCategory === Number(key) ? "filter-btn-mobile active" : "filter-btn-mobile"}
+              onClick={() => setSelectedCategory(Number(key))}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
         <button
           className="news-cta-mobile"
           onClick={() => handleOpen("https://www.instagram.com/delegadoamirsalmen/")}
@@ -87,7 +107,9 @@ export default function NoticiasMobile() {
           </div>
         )}
 
-        {!loading && !erro && cards.map(item => (
+        {!loading && !erro && cards
+          .filter(item => selectedCategory === 0 ? true : item.categoria === selectedCategory)
+          .map(item => (
           <article key={item.id} className="news-card-mobile">
             <div className="news-image-mobile">
               {item.img ? (
